@@ -15,40 +15,40 @@ public class MethodArguments {
      * @param args the command line arguments
      */
     
-    public static int addUp(int[] args){
+    public static int addUp(int... l){
         System.out.println("Executing int addition");
         int sum = 0;
-        if(args.length == 0 || args.length ==1)
+        if(l.length == 0 || l.length ==1)
             sum = 0;
         else{
-            for (int i = 0; i<args.length; i++){
-                sum += args[i];
+            for (int i = 0; i<l.length; i++){
+                sum += l[i];
             }
         }
         return sum;
     }
     
-    public static double addUp(double[] args){
+    public static double addUp(double... l){
         System.out.println("Executing double addition");
         double sum = 0;
-        if(args.length == 0 || args.length ==1)
+        if(l.length == 0 || l.length ==1)
             sum = 0;
         else{
-            for (int i = 0; i<args.length; i++){
-                sum += args[i];
+            for (int i = 0; i<l.length; i++){
+                sum += l[i];
             }
         }
         return sum;
     }
     
-    public static int addUp(String[] args){
+    public static int addUp(String... l){
         System.out.println("Executing double addition");
         int sum = 0;
-        if(args.length == 0 || args.length ==1)
+        if(l.length == 0 || l.length ==1)
             sum = 0;
         else{
-            for (int i = 0; i<args.length; i++){
-                sum += toNumber(args[i]);
+            for (int i = 0; i<l.length; i++){
+                sum += toNumber(l[i]);
             }
         }
         return sum;
@@ -65,11 +65,11 @@ public class MethodArguments {
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        String arguments[] = {"one","three"};
-        System.out.println(addUp(arguments)); 
-//        System.out.println(addUp(1, 4));
-//        System.out.println(addUp("one", "three"));
-//        System.out.println(addUp(2, 3.5));
+//        String arguments[] = {"one","three"};
+//        System.out.println(addUp(arguments)); 
+        System.out.println(addUp(1, 4));
+        System.out.println(addUp("one", "three"));
+        System.out.println(addUp(2, 3.5));
 //        System.out.println(addUp(1, "three"));
 
 
